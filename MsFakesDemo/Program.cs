@@ -3,7 +3,7 @@ Console.WriteLine("Hello, World!");
 
 public class Greeter
 {
-    public string Greet()
+    internal string Greet()
     {
         var timeOfDay = DateTime.Now;
 
