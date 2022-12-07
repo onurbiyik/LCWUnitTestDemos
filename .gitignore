@@ -361,4 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/AspCore7App/wwwroot/lib
+**/wwwroot/lib

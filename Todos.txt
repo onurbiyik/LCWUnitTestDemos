@@ -1,0 +1,19 @@
+
+
+AspCore7App.Tests
+	get authenticated tests working with an in-memory db.
+
+Demo Builder Pattern for testing.
+
+
+Understand and demo xunit.runner.json
+	{
+	  "shadowCopy": false,
+	  "parallelizeAssembly": false,
+	  "parallelizeTestCollections": false
+	}
+
+COVERLET
+
+
+MsFakesDemo add some property etc.
