@@ -1,13 +1,12 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 
-namespace AspCore7App.Tests
+namespace AspCore7App.IntegrationTests.A_Static
 {
-    public class BasicTests
-    : IClassFixture<WebApplicationFactory<Program>>
+    public class StaticPageTests : IClassFixture<WebApplicationFactory<Program>>
     {
         private readonly WebApplicationFactory<Program> _factory;
 
-        public BasicTests(WebApplicationFactory<Program> factory)
+        public StaticPageTests(WebApplicationFactory<Program> factory)
         {
             _factory = factory;
         }
@@ -42,7 +41,7 @@ namespace AspCore7App.Tests
             var response = await client.GetAsync(url);
 
             // Assert
-            Assert.Equal(System.Net.HttpStatusCode.NotFound, response.StatusCode); 
+            Assert.Equal(System.Net.HttpStatusCode.NotFound, response.StatusCode);
         }
     }
 }

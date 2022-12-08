@@ -3,6 +3,10 @@
 AspCore7App.Tests
 	get authenticated tests working with an in-memory db.
 
+
+Test Server Middleware?
+https://learn.microsoft.com/en-us/aspnet/core/test/middleware?view=aspnetcore-7.0
+	
 Demo Builder Pattern for testing.
 
 
