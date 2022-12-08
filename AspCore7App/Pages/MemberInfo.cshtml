@@ -1,0 +1,17 @@
+﻿@page
+@model AspCore7App.Pages.MemberInfoModel
+
+@{
+    ViewData["Title"] = "Countries";
+}
+
+<h1>Member Info </h1>
+
+<h3>Welcome @User.Identity.Name</h3>
+
+
+<ul>
+@foreach(var cl in User.Claims){
+    <li>@cl.ToString()</li>
+}
+</ul>

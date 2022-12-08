@@ -1,6 +1,4 @@
-﻿using AspCore7App.IntegrationTests.C_NonProd_Readonly;
-
-namespace AspCore7App.IntegrationTests.D_NonProd_InMemorySQL
+﻿namespace AspCore7App.IntegrationTests.D_NonProd_InMemorySQL
 {
     // DO NOT USE IN MEMORY FOR TESTING
     public class NonProdInMemorySQLTests : IClassFixture<InMemorySQLWebApplicationFactory<Program>>

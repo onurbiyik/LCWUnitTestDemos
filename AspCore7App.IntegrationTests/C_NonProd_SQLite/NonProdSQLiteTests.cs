@@ -1,6 +1,4 @@
 ﻿using AspCore7App.Data;
-using AspCore7App.IntegrationTests.C_NonProd_Readonly;
-using AspCore7App.IntegrationTests.D_NonProd_InMemorySQL;
 using Microsoft.AspNetCore.Mvc.Testing;
 
 namespace AspCore7App.IntegrationTests.C_NonProd_SQLite
