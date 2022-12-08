@@ -19,8 +19,6 @@ namespace AspCore7App.IntegrationTests.C_NonProd_SQLite
         public async Task Get_CountriesPage_Returns3Countries()
         {
             // Arrange
-
-
             var client = _factory.CreateClient();
 
             // Act
@@ -29,7 +27,7 @@ namespace AspCore7App.IntegrationTests.C_NonProd_SQLite
 
             // Assert
             response.EnsureSuccessStatusCode(); // Status Code 200-299
-            Assert.Contains("Türkiye", responseHtml);
+            Assert.Contains("Namibia", responseHtml);
         }
     }
 }

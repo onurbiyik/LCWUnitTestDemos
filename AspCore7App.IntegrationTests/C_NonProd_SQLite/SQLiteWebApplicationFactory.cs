@@ -25,29 +25,21 @@ namespace AspCore7App.IntegrationTests.C_NonProd_Readonly
                 services.Remove(dbConnectionDescriptor);
 
                 // Create open SqliteConnection so EF won't automatically close it.
-                services.AddSingleton<DbConnection>(container =>
+                // this is needed because once disconnected, in memory db is reset
+                services.AddSingleton((Func<IServiceProvider, DbConnection>)(container =>
                 {
                     var connection = new SqliteConnection("DataSource=:memory:");
                     connection.Open();
 
                     return connection;
-                });
+                }));
 
                 services.AddDbContext<ApplicationDbContext>((container, optBuilder) =>
                 {
                     var connection = container.GetRequiredService<DbConnection>();
                     optBuilder.UseSqlite(connection);
-                    
-                    
-                    var ctxOptions = optBuilder.Options;
 
-                    // Create the schema and seed some data
-                    //using var context = new ApplicationDbContext(ctxOptions);
-
-                    //context.AddRange(
-                    //    new Country { Id = 1, Name = "Türkiye", Population = 123456789 },
-                    //    new Country { Id = 2, Name = "Namibia", Population = 555 });
-                    //context.SaveChanges();
+                    SeedData(optBuilder);
                 });
 
 
@@ -55,6 +47,20 @@ namespace AspCore7App.IntegrationTests.C_NonProd_Readonly
            
 
             builder.UseEnvironment("Development");
+        }
+
+        private static void SeedData(DbContextOptionsBuilder optBuilder)
+        {
+            // Create the schema and seed some data
+            var context = new ApplicationDbContext((DbContextOptions<ApplicationDbContext>)optBuilder.Options);
+
+            context.Database.EnsureCreated();
+
+            context.AddRange(
+                new Country { Id = 1, Name = "Türkiye", Population = 123456789 },
+                new Country { Id = 2, Name = "Namibia", Population = 555 });
+            context.SaveChanges();
+
         }
     }
 }
