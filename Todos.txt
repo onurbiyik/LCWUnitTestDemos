@@ -1,3 +1,21 @@
+﻿Content check Unıt
+https://nickchapsas.com/p/from-zero-to-hero-unit-testing-in-c
+
+
+Content check Integratıon
+https://nickchapsas.com/p/from-zero-to-hero-integration-testing-in-asp-net-core
+
+
+
+
+
+Verıfy nuget snapshot testing.
+https://www.youtube.com/watch?v=Q1_YkcPwpqY
+
+
+cooverage
+coverlet, stryker
+https://www.youtube.com/watch?v=sGwfwtkaDfk
 
 
 Test Server Middleware?
@@ -13,7 +31,6 @@ Understand and demo xunit.runner.json
 	  "parallelizeTestCollections": false
 	}
 
-COVERLET
 
 
 MsFakesDemo add some property etc.
