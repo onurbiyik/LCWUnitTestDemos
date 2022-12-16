@@ -154,67 +154,16 @@ namespace Basics
             
             foreach (var word in words)
             {
-                result.AddRange(KelimeHecele2(word));
+                result.AddRange(KelimeHecele(word));
             }
 
             return result;
         }
+
+
+
 
         private static List<string> KelimeHecele(string input)
-        {
-            List<string> result = new();  
-
-            var inputLength = input.Length;
-            int indexForSplit = 0;
-            for (int chIndexForFindVowel = 0; chIndexForFindVowel < inputLength; chIndexForFindVowel++)
-            {
-                if (IsVowel(input[chIndexForFindVowel]))
-                {
-                    // Bulunan sesli harf kelimenin sonunda veya sondan ikinci harf ise
-                    if (chIndexForFindVowel == inputLength - 1 || chIndexForFindVowel == inputLength - 2)
-                    {
-                        int characterCountForSyllable = inputLength - chIndexForFindVowel + 1;
-                        string temp = input.Substring(indexForSplit, characterCountForSyllable);
-                        result.Add((temp));
-                    }
-                    // Bulunan sesli harften sonra gelen harf sesli ise (Saat)
-                    else if (IsVowel(input[chIndexForFindVowel + 1]))
-                    {
-                        string temp = input.Substring(indexForSplit, chIndexForFindVowel + 1);
-                        result.Add((temp));
-                        indexForSplit = chIndexForFindVowel + 1;
-                    }
-                    // Bulunan sesli harften sonra gelen sessiz harften sonra gelen harf sesli ise
-                    else if (IsVowel(input[chIndexForFindVowel + 2]))
-                    {
-                        int characterCountForSyllable = chIndexForFindVowel + 1 - indexForSplit;
-                        string temp = input.Substring(indexForSplit, characterCountForSyllable);
-                        result.Add((temp));
-                        indexForSplit = chIndexForFindVowel + 1;
-                    }
-                    // Bulunan sesli harften sonra gelen yanyana 2 sessiz harften sonra gelen harf sesli ise
-                    else if (IsVowel(input[chIndexForFindVowel + 3]))
-                    {
-                        int characterCountForSyllable = chIndexForFindVowel + 2 - indexForSplit;
-                        string temp = input.Substring(indexForSplit, characterCountForSyllable);
-                        result.Add((temp));
-                        indexForSplit = chIndexForFindVowel + 2;
-                    }
-                    // Bulunan sesli harften sonra gelen 3 harf de sessiz ise
-                    else
-                    {
-                        int characterCountForSyllable = chIndexForFindVowel + 3 - indexForSplit;
-                        string temp = input.Substring(indexForSplit, characterCountForSyllable);
-                        result.Add((temp));
-                        indexForSplit = chIndexForFindVowel + 3;
-                    }
-                }
-            }
-            return result;
-        }
-
-
-        private static List<string> KelimeHecele2(string input)
         {
             List<string> result = new();
 

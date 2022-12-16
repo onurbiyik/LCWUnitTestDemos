@@ -24,7 +24,7 @@ namespace AspCore7App.IntegrationTests.A_Static
             var response = await client.GetAsync(url);
 
             // Assert
-            response.EnsureSuccessStatusCode(); // Status Code 200-299
+            Assert.True(response.IsSuccessStatusCode);
             Assert.Equal("text/html; charset=utf-8", response.Content.Headers.ContentType.ToString());
         }
 

@@ -5,7 +5,7 @@ namespace Basics.Tests;
 public class HeceTests
 {
     [Fact]
-    public void Test1()
+    public void TestOnur()
     {
         // Arrange
 
@@ -15,6 +15,20 @@ public class HeceTests
         // Assert
         Assert.Equal(new[] { "o", "nur" }, result);
     }
+
+
+    [Fact(Skip = "Skipped for now")]
+    public void TestAraba()
+    {
+        // Arrange
+
+        // Act
+        var result = "Araba".Hecele();
+
+        // Assert
+        Assert.Equal(new[] { "a", "ra", "ba" }, result);
+    }
+
 
 
     [Theory]
