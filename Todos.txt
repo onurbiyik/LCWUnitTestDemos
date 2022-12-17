@@ -5,31 +5,10 @@ https://nickchapsas.com/p/from-zero-to-hero-unit-testing-in-c
 Content check Integratıon
 https://nickchapsas.com/p/from-zero-to-hero-integration-testing-in-asp-net-core
 
-
-
-
-
-Verıfy nuget snapshot testing.
-https://www.youtube.com/watch?v=Q1_YkcPwpqY
-
-
-cooverage
-coverlet, stryker
-https://www.youtube.com/watch?v=sGwfwtkaDfk
-
-
-Test Server Middleware?
-https://learn.microsoft.com/en-us/aspnet/core/test/middleware?view=aspnetcore-7.0
 	
 Demo Builder Pattern for testing.
 
 
-Understand and demo xunit.runner.json
-	{
-	  "shadowCopy": false,
-	  "parallelizeAssembly": false,
-	  "parallelizeTestCollections": false
-	}
 
 
 
