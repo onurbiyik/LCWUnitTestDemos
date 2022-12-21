@@ -9,7 +9,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AspCore7App.IntegrationTests.E_AuthenticationTests
+namespace AspCore7App.IntegrationTests.F_AuthenticationTests
 {
     // todo: pick a strategy and mock sql. maybe in-memory
     // https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-7.0#mock-authentication

@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using Microsoft.AspNetCore.Mvc.Testing;
 
-namespace AspCore7App.IntegrationTests.F_Verify
+namespace AspCore7App.IntegrationTests.G_Verify
 {
     [UsesVerify]
     public class FluentAndVerifyTests : IClassFixture<WebApplicationFactory<Program>>

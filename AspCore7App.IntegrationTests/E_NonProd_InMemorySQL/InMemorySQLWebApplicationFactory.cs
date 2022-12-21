@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using System.Data.Common;
 
-namespace AspCore7App.IntegrationTests.D_NonProd_InMemorySQL
+namespace AspCore7App.IntegrationTests.E_NonProd_InMemorySQL
 {
     /// <summary>
     /// IN MEMORY IS NOT RECOMMENDED FOR TESTING

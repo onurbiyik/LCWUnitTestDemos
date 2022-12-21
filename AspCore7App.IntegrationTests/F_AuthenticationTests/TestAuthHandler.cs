@@ -3,7 +3,7 @@ using Microsoft.Extensions.Options;
 using System.Security.Claims;
 using System.Text.Encodings.Web;
 
-namespace AspCore7App.IntegrationTests.E_AuthenticationTests
+namespace AspCore7App.IntegrationTests.F_AuthenticationTests
 {
     public class TestAuthHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {

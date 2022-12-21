@@ -1,4 +1,4 @@
-﻿namespace AspCore7App.IntegrationTests.D_NonProd_InMemorySQL
+﻿namespace AspCore7App.IntegrationTests.E_NonProd_InMemorySQL
 {
     // DO NOT USE IN MEMORY FOR TESTING
     public class NonProdInMemorySQLTests : IClassFixture<InMemorySQLWebApplicationFactory<Program>>

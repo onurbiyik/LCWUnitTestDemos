@@ -47,6 +47,9 @@ public class HeceTests
     }
 
     [Fact]
+    [Trait("Category", "L0")]
+    [Trait("Case", "Edge")]
+
     public void Hecele_WithEmptyString_ShouldReturnEmptyList()
     {
         // Arrange
@@ -61,6 +64,8 @@ public class HeceTests
 
 
     [Fact]
+    [Trait("Category", "L0")]
+    [Trait("Case", "Edge")]
     public void Hecele_WithNullString_ShouldThrowException()
     {
         // Arrange

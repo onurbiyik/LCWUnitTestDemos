@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
 using System.Reflection.Metadata;
 
-namespace AspCore7App.IntegrationTests.E_AuthenticationTests
+namespace AspCore7App.IntegrationTests.F_AuthenticationTests
 {
     public class AuthenticatingWebApplicationFactory<TProgram> : WebApplicationFactory<TProgram> where TProgram : class
     {
