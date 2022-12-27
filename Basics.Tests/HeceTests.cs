@@ -37,9 +37,11 @@ public class HeceTests
     [InlineData("sarımtrak", new[] { "sa", "rım", "trak" })]
     [InlineData("Mert", new[] { "Mert" })]
     [InlineData("Kartpostal", new[] { "Kart", "pos", "tal" })]
+    [InlineData("Saat kaç?", new[] { "Sa", "at", "kaç?" })]
     [InlineData("Vergi kutsaldır", new[] { "Ver", "gi", "kut", "sal", "dır" })]
     [InlineData("Her Koyun Kendi Bacağından Asılır", new[] { "Her", "Ko", "yun", "Ken", "di", "Ba", "ca", "ğın", "dan", "A", "sı", "lır" })]
-    public void Test2(string input, IEnumerable<string> expected)
+    [InlineData("انا معلم.", new[] { "انا معلم." })]
+    public void TestHecele(string input, IEnumerable<string> expected)
     {
         var result = input.Hecele();
 

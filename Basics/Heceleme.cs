@@ -147,9 +147,9 @@ namespace Basics
         {
             var result = new List<string>();
 
-            if (string.IsNullOrWhiteSpace(input))
+            if (input == null)
             {
-                return result;
+                throw new ArgumentNullException(nameof(input));
             }
 
             var words = input.Split(karakter);
