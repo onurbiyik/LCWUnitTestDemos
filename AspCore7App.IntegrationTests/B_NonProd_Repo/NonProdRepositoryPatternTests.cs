@@ -29,6 +29,7 @@ namespace AspCore7App.IntegrationTests.B_NonProd_Repo
 
             // Assert
             repositoryMock.Verify(r => r.GetAllCountries()); // make sure mock is called
+            repositoryMock.Verify(r => r.GetAllCountries(), Times.Once); // make sure db is called only once
             Assert.Equal(3, page.Country.Count()); // only 3 countries should be selected
         }
     }
