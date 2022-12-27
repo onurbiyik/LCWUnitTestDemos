@@ -1,5 +1,6 @@
 ﻿using FluentAssertions;
 using Microsoft.QualityTools.Testing.Fakes;
+using System.Text.Json;
 
 namespace MsFakesDemo.Tests
 {
@@ -26,8 +27,9 @@ namespace MsFakesDemo.Tests
 
                 // Assert
                 result.Should().Be(expected);
-
             }
         }
+
+      
     }
 }
