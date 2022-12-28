@@ -10,11 +10,11 @@ namespace AspCore7App.IntegrationTests.B_NonProd_Repo
         [Fact]
         public async Task GetCountries()
         {
-            // Arrange
-            var repositoryMock = new Mock<ICountryRepository>();
+           // Arrange
+           var repositoryMock = new Mock<ICountryRepository>();
             repositoryMock
                 .Setup(r => r.GetAllCountries())
-                .Returns(new[] { 
+                .Returns(new[] {
                     new Country { Id = 1, Name = "Türkiye", Population = 80000000 },
                     new Country { Id = 2, Name = "Japonya", Population = 40000000 },
                     new Country { Id = 3, Name = "Kazakistan", Population = 34000000 },
@@ -22,6 +22,8 @@ namespace AspCore7App.IntegrationTests.B_NonProd_Repo
                 });
 
             var page = new CountriesUsingRepositoryPatternModel(repositoryMock.Object);
+
+            //var page = new CountriesUsingRepositoryPatternModel(new TestCountryRepo());
 
             // Act
             await page.OnGetAsync();
@@ -33,4 +35,32 @@ namespace AspCore7App.IntegrationTests.B_NonProd_Repo
             Assert.Equal(3, page.Country.Count()); // only 3 countries should be selected
         }
     }
+
+    //public class TestCountryRepo : ICountryRepository
+    //{
+    //    public void AddCountry(Country country)
+    //    {
+    //        throw new NotImplementedException();
+    //    }
+
+    //    public IEnumerable<Country> GetAllCountries()
+    //    {
+    //        return new[] {
+    //                new Country { Id = 1, Name = "Türkiye", Population = 80000000 },
+    //                new Country { Id = 2, Name = "Japonya", Population = 40000000 },
+    //                new Country { Id = 3, Name = "Kazakistan", Population = 34000000 },
+    //                new Country { Id = 4, Name = "Yemen", Population = 12000000 },
+    //            };
+    //    }
+
+    //    public Country? GetCountry(string name)
+    //    {
+    //        throw new NotImplementedException();
+    //    }
+
+    //    public void SaveChanges()
+    //    {
+    //        throw new NotImplementedException();
+    //    }
+    //}
 }
