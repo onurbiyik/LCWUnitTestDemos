@@ -14,7 +14,7 @@ namespace AspCore7App.IntegrationTests.D_TestContainers
             var scope = factory.Services.CreateScope();
             DbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
-            // TODO : Seed DB CONTEXT
+            // you might as well Seed dbContext here
         }
 
 

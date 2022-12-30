@@ -15,15 +15,12 @@ namespace AspCore7App.IntegrationTests.D_TestContainers
             // _someService = scope.ServiceProvider.GetRequiredService<SomeService>();
         }
 
-        public Task DisposeAsync()
-        {
-            throw new NotImplementedException();
-        }
 
         [Fact(Timeout = 100000)]
         public async Task Get_CountriesPage_Returns3Countries()
         {
             // Arrange
+            // CreateTestDate(base.DbContext);
             var client = _factory.CreateClient();
 
             // Act
